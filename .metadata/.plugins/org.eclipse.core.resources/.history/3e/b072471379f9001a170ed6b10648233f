@@ -1,0 +1,28 @@
+package tetris;
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.EtchedBorder;
+
+public class StartWindow {
+	public static void main(String args[])  
+    {  
+	    JFrame f= new JFrame("Tetris by Uzair Arif");
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    f.setLayout(new GridBagLayout());  
+        ImageIcon icon = new ImageIcon("C:\\JavaW3\\tetris\\tetris\\title.png");
+        f.setIconImage(icon.getImage());
+	    f.getContentPane().setBackground(new Color(10,10,80));
+	    f.setSize(600,400); 
+	    
+	    JLabel title = new JLabel(icon);
+	    title.setOpaque(true);
+	    title.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    f.add(title,gbc);
+	    
+	    f.setVisible(true);  
+    } 
+}

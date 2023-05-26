@@ -1,0 +1,30 @@
+package tetris;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class StartWindow{
+	public ImageIcon icon = new ImageIcon(this.getClass().getClassLoader().getResource("/pics/t.png"));	
+	
+	public StartWindow() {
+	    JFrame f= new JFrame("Tetris by Uzair Arif");
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    f.setLayout(new GridBagLayout());  
+        f.setIconImage(this.icon.getImage());
+	    f.getContentPane().setBackground(new Color(10,10,80));
+	    f.setSize(1000,600); 
+        ImageIcon mainTitle = new ImageIcon("/pics/title.png");
+	    JLabel title = new JLabel(mainTitle);
+	    title.setOpaque(true);
+	    title.setBorder(BorderFactory.createLineBorder(new Color(0,0,50), 5));
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    f.add(title,gbc);
+	    
+	    f.setVisible(true);
+	}  
+	public static void main(String args[]) {
+		Image mainIcon = icon.getImage();
+		new StartWindow();
+	}  
+}

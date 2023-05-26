@@ -1,0 +1,16 @@
+package tetris;
+
+import javax.swing.*;
+
+public class StartWindow {
+	public static void main(String args[])  
+    {  
+	    JFrame f= new JFrame("Tetris by Uzair Arif");  
+	    JLabel title = new JLabel();  
+	    title.setBounds(50,50, 100,30);   
+	    f.add(title)
+	    f.setSize(300,300);  
+	    f.setLayout(null);  
+	    f.setVisible(true);  
+    } 
+}

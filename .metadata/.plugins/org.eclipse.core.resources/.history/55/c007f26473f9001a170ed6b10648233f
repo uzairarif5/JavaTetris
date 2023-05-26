@@ -1,0 +1,26 @@
+package tetris;
+
+import java.awt.Color;
+import java.awt.*;
+
+import javax.swing.*;
+
+public class StartWindow {
+	public static void main(String args[])  
+    {  
+	    JFrame f= new JFrame("Tetris by Uzair Arif"); 
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    f.setLayout(new GridBagLayout());  
+	    f.setSize(300,300);  
+	    f.setResizable(false);
+	    
+	    JLabel title = new JLabel("asdd");
+	    title.setOpaque(true);
+	    title.setBackground(Color.blue);
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    f.add(title,gbc);
+	    
+	    f.setVisible(true);  
+    } 
+}

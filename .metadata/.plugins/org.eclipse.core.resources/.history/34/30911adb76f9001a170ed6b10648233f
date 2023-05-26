@@ -1,0 +1,26 @@
+package tetris;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class StartWindow {
+	public static void main(String args[])  
+    {  
+	    JFrame f= new JFrame("Tetris by Uzair Arif"); 
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    f.setLayout(new GridBagLayout());  
+        ImageIcon icon = new ImageIcon("C:\\Users\\DELL\\Desktop\\Uzair\\youtube\\icon.png");
+        f.setIconImage(icon.getImage());
+	    f.setSize(600,400); 
+	    
+	    JLabel title = new JLabel(icon);
+	    title.setOpaque(true);
+	    title.setBorder(BorderFactory.createLineBorder(new Color(0,0,255),3));
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    f.add(title,gbc);
+	    
+	    f.setVisible(true);  
+    } 
+}

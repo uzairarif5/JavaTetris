@@ -1,0 +1,52 @@
+package tetris;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class StartWindow{
+	public static final int mainTitleW = 500;
+	public static final int mainTitleH = 250;
+
+	public static void main(String args[]) {
+	    JFrame f= new JFrame("Tetris by Uzair Arif");
+	    GridBagConstraints gbc = new GridBagConstraints();
+	    f.setLayout(new GridBagLayout());  
+        ImageIcon icon = new ImageIcon(StartWindow.class.getResource("../pics/t.png"));
+        f.setIconImage(icon.getImage());
+	    f.getContentPane().setBackground(new Color(10,10,80));
+	    f.setSize(1000,600); 
+
+        ImageIcon mainTitle = new ImageIcon(new ImageIcon(StartWindow.class.getResource("../pics/title.png")).getImage().getScaledInstance(StartWindow.mainTitleW, StartWindow.mainTitleH, Image.SCALE_DEFAULT));
+	    JLabel title = new JLabel(mainTitle);
+	    title.setOpaque(true);
+	    title.setBorder(BorderFactory.createLineBorder(new Color(0,0,50), 5));
+	    gbc.gridx = 0;
+	    gbc.gridy = 0;
+	    gbc.gridwidth = 2;
+	    gbc.weighty = 0.5;
+	    gbc.insets = new Insets(0,0,0,50);
+	    f.add(title,gbc);
+	    
+	    JButton startB = new JButton();
+	    gbc.gridx = 0;
+	    gbc.gridy = 1;
+	    gbc.gridwidth = 1;
+	    gbc.weightx = 0.5;
+	    gbc.weighty = 0.5;
+	    gbc.insets = new Insets(0,0,0,50);
+	    gbc.anchor = GridBagConstraints.CENTER;
+	    f.add(startB,gbc);
+	    
+	    JButton quitB = new JButton();
+	    gbc.gridx = 1;
+	    gbc.gridy = 1;
+	    gbc.gridwidth = 1;
+	    gbc.weightx = 0.5;
+	    gbc.weighty = 0.5;
+	    gbc.insets = new Insets(0,0,0,50);
+	    gbc.anchor = GridBagConstraints.CENTER;
+	    f.add(quitB,gbc);
+	    
+	    f.setVisible(true);
+	}  
+}
